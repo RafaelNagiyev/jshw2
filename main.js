@@ -63,8 +63,22 @@ function five() {
 }
 
 function six() {
-    const a = +prompt('Enter A')
-    const b = +prompt('Enter B')
+    let a = +prompt('Enter A')
+    let b = +prompt('Enter B')
+    let c;
+    if(b>a) {
+        c = a;
+        a = b;
+        b = c;
+    }
+    let r;
+    while (r != 0) {
+        let r = a % b ;
+        a = b;
+        b = r;
+        break
+    }
+    console.log(r)
+        
 }
-
-five()
+six() 
