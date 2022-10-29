@@ -63,22 +63,28 @@ function five() {
 }
 
 function six() {
-    let a = +prompt('Enter A')
-    let b = +prompt('Enter B')
-    let c;
-    if(b>a) {
-        c = a;
-        a = b;
-        b = c;
+    let a = +prompt("Enter A");
+    let b = +prompt("Enter B");
+    while (a != 0 && b != 0) {
+      if (a > b) {
+        a = a % b;
+      } else {
+        b = b % a;
+      }
+  
+      console.log(a + b);
     }
-    let r;
-    while (r != 0) {
-        let r = a % b ;
-        a = b;
-        b = r;
-        break
-    }
-    console.log(r)
-        
 }
-six() 
+
+function seven () {
+    let a = +prompt("Enter the number");
+    let reversed = 0;
+    while (a > 0) {
+       let lastNumber = a % 10;
+       reversed = reversed * 10 + lastNumber;
+       a = Math.floor(a / 10);
+    }
+    console.log(reversed);
+}
+
+seven ()
